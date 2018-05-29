@@ -1,0 +1,38 @@
+{
+  "name": "blabbing-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/app",
+    "test": "INTEGRATION_TEST=true node_modules/mocha/bin/_mocha 'test/**/*.spec.js' --exit",
+    "codecov": "INTEGRATION_TEST=true istanbul cover node_modules/mocha/bin/_mocha 'test/**/*.spec.js' --exit && codecov"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "~1.18.2",
+    "chai": "^4.1.2",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jsonwebtoken": "^8.1.0",
+    "mocha": "^5.2.0",
+    "moment": "^2.20.1",
+    "mongodb": "^3.0.1",
+    "mongoose": "^5.0.1",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "~1.9.0",
+    "ramda": "^0.25.0",
+    "redis": "^2.8.0",
+    "sinon": "^5.0.10",
+    "sinon-mongoose": "^2.1.1",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.2",
+    "istanbul": "^1.1.0-alpha.1",
+    "mockgoose": "^7.3.5",
+    "should": "^13.2.1",
+    "supertest": "^3.1.0"
+  }
+}
