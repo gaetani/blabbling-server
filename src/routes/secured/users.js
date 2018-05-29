@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
-const {Category, Topic, Message, Thread, User} = require('../model/index');
+const {Category, Topic, Message, Thread, User} = require('../../model/index');
 
 const P = require('bluebird');
 const R = require('ramda');

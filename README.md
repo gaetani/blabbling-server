@@ -1,3 +1,9 @@
+[![codecov](https://codecov.io/gh/gaetani/blabbling-server/branch/master/graph/badge.svg)](https://codecov.io/gh/gaetani/blabbling-server)
+
+https://travis-ci.org/gaetani/blabbling-server.svg?branch=master
+
+https://david-dm.org/gaetani/blabbling-server.svg
+
 # Blabbing Server
 
 Blabbing forum server is a challenge for Vanhack, main purpose is to built a simple Forum APP. 
