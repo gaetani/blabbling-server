@@ -1,0 +1,24 @@
+[{ 
+    "_id" : "809801b6-bf51-4c7e-9139-b52e97bc6c39", 
+    "name" : "General"
+},
+{ 
+    "_id" : "35c6722e-1e73-4538-ade4-2b4955c9237e", 
+    "name" : "United States"
+},
+{ 
+    "_id" : "88c2f960-4086-41cc-8273-18a243e9c1ef", 
+    "name" : "International"
+},
+{ 
+    "_id" : "e3d16e57-eee3-4379-8cdf-eaf40e483c52", 
+    "name" : "Subcultures"
+},
+{ 
+    "_id" : "0c3f3e49-e1c9-473a-9f0e-29792735ff36", 
+    "name" : "Classifieds"
+},
+{ 
+    "_id" : "22996237-90fd-4e5a-b477-4925892b5a4c", 
+    "name" : "Beer Trading"
+}]

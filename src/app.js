@@ -28,13 +28,24 @@ connectMongoDatabase(()=>console.log('MongoDB connected'),
                      ()=>console.error.bind(console, 'MongoDB connection error:'));
 
 
-const users = require('./routes/users');
+const secured = require('./routes/secured/index');
 const forum = require('./routes/forum');
+app.use((req, res, next) => {
+    let {page, offset} = req.query;
+    page = !page? 1: +page;
+    offset = !offset? 0: +offset;
+    const limit = 10;
+    req.paginate = {
+        page, offset, limit
+    };
+    next();
+});
 
-app.use('/secured', users);
+app.use('/secured', secured);
 app.use('/forum', forum);
 
 app.use((req, res, next) => {
+    app;
     const err = new Error('Not Found');
     err.status = 404;
     next(err);

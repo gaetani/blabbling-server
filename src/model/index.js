@@ -58,7 +58,10 @@ const Category = mongoose.model('Category', CategorySchema);
 const options = { discriminatorKey: 'typeMessage' };
 
 const ForumMessageSchema = new Schema({
-    _id: { type: String, default: uuidv4() },
+    _id: { type: String, default: genUUID= ()=> {
+        const id =uuidv4();
+        return id;
+    } },
     name: String,
 }, options);
 
@@ -68,18 +71,15 @@ ForumMessageSchema.plugin(mongoosePaginate);
 
 const ForumMessage = mongoose.model('ForumMessage', ForumMessageSchema);
 const Topic = ForumMessage.discriminator('Topic', new Schema({
-    _id: { type: String, default: uuidv4() },
     description: String,
     categoryId: { type: String, ref: 'Category' }
 }).plugin(mongoosePaginate));
 
 const Thread = ForumMessage.discriminator('Thread', new Schema({
-    _id: { type: String, default: uuidv4() },
     parentId: { type: String, ref: 'ForumMessage' }
 }).plugin(mongoosePaginate));
 
 const Message = ForumMessage.discriminator('Message', new Schema({
-    _id: { type: String, default: uuidv4() },
     parentId: { type: String, ref: 'ForumMessage' },
     parents: [{ type: String, ref: 'ForumMessage' }],
     datePost: Date,
